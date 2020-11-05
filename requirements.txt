@@ -1,7 +1,5 @@
-re
-requests
-etree
-logging
+Requests
+Etree
 Flask
 Flask-RESTful
 uwsgi
