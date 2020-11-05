@@ -14,7 +14,7 @@ class RMP(Resource):
         rmp.retrieve_rmp_info()
         if rmp.get_rmp_info() == "Info currently not available":            
             return {'Message': 'Professor/Teacher not found'}
-        return rmp.get_rmp_info().split('/')[0]
+        return float(rmp.get_rmp_info().split('/')[0])
 
 api.add_resource(RMP, '/<string:name>')
 
