@@ -13,7 +13,7 @@ class RMP(Resource):
         rmp = RateMyProfAPI(teacher = name)  
         rmp.retrieve_rmp_info()
         if rmp.get_rmp_info() == "Info currently not available":            
-            return {'Message': 'Professor/Teacher not found'}
+            return -1
         return float(rmp.get_rmp_info().split('/')[0])
 
 api.add_resource(RMP, '/<string:name>')
