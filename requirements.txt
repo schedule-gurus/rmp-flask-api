@@ -1,0 +1,7 @@
+re
+requests
+etree
+logging
+Flask
+Flask-RESTful
+uwsgi
