@@ -1,4 +1,5 @@
 Requests
+Lxml
 Flask
 Flask-RESTful
 uwsgi
