@@ -1,5 +1,4 @@
 Requests
-Etree
 Flask
 Flask-RESTful
 uwsgi
