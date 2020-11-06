@@ -151,14 +151,19 @@ class RateMyProfAPI:
             'div/div[1]/text()' 
         )[0]
 
-        print(len(rating))
+        print(rating)
 
         if not re.match(r'.*?N/A', self.rating):
-            rating = re.findall(r'\d\.\d', rating)
-            if not rating:
-                rating = INFO_NOT_AVAILABLE
+            rat1 = re.findall(r'\d\.\d', rating)
+
+            if not rat1:
+                rat2 = re.findall(r'\d', rating)
+                if not rat2:
+                    rating = INFO_NOT_AVAILABLE
+                else:
+                    rating = rat2[0]
             else:
-                rating = rating[0]
+                rating = rat1[0]
 
             return rating
 
